@@ -1,19 +1,17 @@
 'use client';
 
-import { CustomButton } from "@/components/CustomButton";
-
 const Page = () => {
-
-  const handleButton1 = () => alert('Clicou no botão 1')
-  const handleButton2 = () => alert('Clicou no botão 2')
-  const handleButton3 = () => alert('Clicou no botão 3')
-  
+  const handleFormSubmit = () => {
+    alert('Formulário enviado com sucesso!');
+  };
 
   return (
-    <div className='w-screen h-screen flex justify-center items-center'>
-      <CustomButton label='Clique aqui 1' onClick={handleButton1} />
-      <CustomButton label='Clique aqui 2' onClick={handleButton2} />
-      <CustomButton label='Clique aqui 3' onClick={handleButton3} />
+    <div className='w-screen h-screen flex flex-col justify-center items-center'>
+      <h1 className='text-5xl mb-4'>Form de Login</h1>
+      <form onSubmit={handleFormSubmit}>
+        <input type='text' />
+        <input type='submit' value='Enviar' />
+      </form>
     </div>
   );
 };
