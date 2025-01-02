@@ -5,9 +5,7 @@ const Page = () => {
   return (
     <div className='w-screen h-screen flex justify-center items-center'>
       <button
-        onClick={function click() {
-          alert('Funcionou2!');
-        }}
+        onClick={() => alert("Funcionou 3!")}
         className='p-3 bg-blue-700 text-white rounded-md'
       >
         Clique aqui
