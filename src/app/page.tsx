@@ -1,21 +1,25 @@
 'use client';
 
-import { FormEvent } from 'react';
+import { useState } from "react";
 
 const Page = () => {
-  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    alert('Formulário enviado com sucesso!');
+  //array desconstruido
+  const [count, setCount] = useState<number>(0)
+
+  const handleClickButton = () => {
+    count++;
+    console.log(count);
   };
 
   return (
-    <div className='w-screen h-screen flex flex-col justify-center items-center'>
-      <h1 className='text-5xl mb-4'>Form de Login</h1>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <input type='text' />
-        <input type='submit' value='Enviar' />
-      </form>
+    <div className='w-screen h-screen flex flex-col justify-center items-center text-3xl '>
+      <p>{count}</p>
+      <button onClick={handleClickButton} className='bg-blue-500 p-3'>
+        +1
+      </button>
     </div>
   );
 };
 export default Page;
+
+
