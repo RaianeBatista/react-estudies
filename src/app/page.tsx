@@ -1,7 +1,11 @@
 'use client';
 
+import { FormEvent } from "react";
+
 const Page = () => {
-  const handleFormSubmit = () => {
+
+const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
     alert('Formulário enviado com sucesso!');
   };
 
