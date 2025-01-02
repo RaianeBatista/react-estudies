@@ -1,24 +1,20 @@
 'use client';
 
 const Page = () => {
-  const handleClick = () => {
-    alert('Tudo certo');
-
-    // return () => {
-    //   alert("Agora sim!")
-    // }
+  const avisar = (msg: string) => {
+    alert(msg);
   };
 
   return (
     <div className='w-screen h-screen flex justify-center items-center'>
       <button
-        onClick={() => alert('Funcionou 1')}
+        onClick={() => avisar('mensagem 1')}
         className='p-3 bg-blue-700 text-white rounded-md mr-3'
       >
         Clique aqui
       </button>
       <button
-        onClick={() => alert('Funcionou 2')}
+        onClick={() => avisar('mensagem 2')}
         className='p-3 bg-blue-700 text-white rounded-md'
       >
         Clique aqui
