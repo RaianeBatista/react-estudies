@@ -1,14 +1,19 @@
 'use client';
 
 const Page = () => {
-  const handleButtonClick = () => {
-    alert('Funcionou 4!');
-  };
+
+  const handleClick = () => {
+    alert("Tudo certo")
+    
+    // return () => {
+    //   alert("Agora sim!")
+    // }
+  }
 
   return (
     <div className='w-screen h-screen flex justify-center items-center'>
       <button
-        onClick={handleButtonClick}
+        onClick={handleClick}
         className='p-3 bg-blue-700 text-white rounded-md'
       >
         Clique aqui
