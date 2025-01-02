@@ -12,7 +12,7 @@ const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center'>
       <h1 className='text-5xl mb-4'>Form de Login</h1>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={e => e.preventDefault()}>
         <input type='text' />
         <input type='submit' value='Enviar' />
       </form>
