@@ -1,24 +1,27 @@
 'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 const Page = () => {
-  //array desconstruido
-  const [count, setCount] = useState(0)
+  // const showSecret = true;
+  const [showSecret, setShowSecret] = useState(false)
 
-  const handleClickButton = () => {
-   setCount(count + 1)
+  const handleClickButton = () => { 
+    setShowSecret(true)
   };
+  
 
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center text-3xl '>
-      <p>{count}</p>
       <button onClick={handleClickButton} className='bg-blue-500 p-3'>
-        +1
+        Monstrar área secreta
       </button>
+      {showSecret && 
+        <div className=' bg-blue-300 p-3 rounded-md mt-3'>
+          Área secreta
+        </div>
+      }
     </div>
   );
 };
 export default Page;
-
-
